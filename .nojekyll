@@ -1,0 +1,4 @@
+touch .nojekyll  # 命令行创建
+git add .nojekyll
+git commit -m "禁用 Jekyll"
+git push
