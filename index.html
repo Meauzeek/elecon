@@ -18,14 +18,11 @@ body {
     max-width: 90vw;
 }
 
-
 .periodic-table {
     display: grid;
     grid-template-columns: repeat(18, 40px);
     gap: 2px;
     margin: 0 auto;
-    /* box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    background: rgba(255,255,255,0.95); */
     border-radius: 8px;
     padding: 15px;
 }
@@ -42,7 +39,6 @@ body {
     cursor: pointer;
 }
 
-
 .alkali-metal { background: rgb(236,127,130); }
 .alkaline-earth { background: rgb(239,170,102); }
 .transition-metal { background: rgb(254,221,130); }
@@ -51,7 +47,6 @@ body {
 .nonmetal { background: rgb(151,174,219); }
 .halogen { background: rgb(200,150,210); }
 .noble-gas { background: rgb(200,200,200); }
-
 
 .element::after {
     content: attr(data-category);
@@ -94,97 +89,8 @@ body {
     line-height: 1.2;
 }
 
-
-</style>
-</head>
-<body>
-
-<div class="table-container">
-<div class="periodic-table">
-    <!-- 第1周期 -->
-    <div class="element nonmetal" data-period="1" style="grid-column:1" data-category="非金属(可作金属用)" title="氢">1<br>H</div>
-    <div class="element noble-gas" data-period="1" style="grid-column:18" data-category="稀有气体" title="氦">2<br>He</div>
-
-    <!-- 第2周期 -->
-    <div class="element alkali-metal" data-period="2" style="grid-column:1" data-category="金属" title="锂">3<br>Li</div>
-    <div class="element alkaline-earth" data-period="2" style="grid-column:2" data-category="金属" title="铍">4<br>Be</div>
-    
-    <!-- 过渡金属占位区 -->
-    <div style="grid-column:3/13; grid-row:2"></div>
-    
-    <div class="element metalloid" data-period="2" style="grid-column:13" data-category="非金属" title="硼">5<br>B</div>
-    <div class="element nonmetal" data-period="2" style="grid-column:14" data-category="非金属" title="碳">6<br>C</div>
-    <div class="element nonmetal" data-period="2" style="grid-column:15" data-category="非金属" title="氮">7<br>N</div>
-    <div class="element nonmetal" data-period="2" style="grid-column:16" data-category="非金属" title="氧">8<br>O</div>
-    <div class="element halogen" data-period="2" style="grid-column:17" data-category="非金属" title="氟">9<br>F</div>
-    <div class="element noble-gas" data-period="2" style="grid-column:18" data-category="稀有气体" title="氖">10<br>Ne</div>
-
-    <!-- 第3周期 -->
-    <div class="element alkali-metal" data-period="3" style="grid-column:1" data-category="金属" title="钠">11<br>Na</div>
-    <div class="element alkaline-earth" data-period="3" style="grid-column:2" data-category="金属" title="镁">12<br>Mg</div>
-    
-    <div style="grid-column:3/13; grid-row:3"></div>
-    
-    <div class="element post-transition" data-period="3" style="grid-column:13" data-category="金属" title="铝">13<br>Al</div>
-    <div class="element metalloid" data-period="3" style="grid-column:14" data-category="非金属" title="硅">14<br>Si</div>
-    <div class="element nonmetal" data-period="3" style="grid-column:15" data-category="非金属" title="磷">15<br>P</div>
-    <div class="element nonmetal" data-period="3" style="grid-column:16" data-category="非金属" title="硫">16<br>S</div>
-    <div class="element halogen" data-period="3" style="grid-column:17" data-category="非金属" title="氯">17<br>Cl</div>
-    <div class="element noble-gas" data-period="3" style="grid-column:18" data-category="稀有气体" title="氩">18<br>Ar</div>
-
-    <!-- 第4周期 -->
-    <div class="element alkali-metal" data-period="4" style="grid-column:1" data-category="金属" title="钾">19<br>K</div>
-    <div class="element alkaline-earth" data-period="4" style="grid-column:2" data-category="金属" title="钙">20<br>Ca</div>
-    <div class="element transition-metal" data-period="4" style="grid-column:3" data-category="金属" title="钪">21<br>Sc</div>
-    <div class="element transition-metal" data-period="4" style="grid-column:4" data-category="金属" title="钛">22<br>Ti</div>
-    <div class="element transition-metal" data-period="4" style="grid-column:5" data-category="金属" title="钒">23<br>V</div>
-    <div class="element transition-metal" data-period="4" style="grid-column:6" data-category="金属" title="铬">24<br>Cr</div>
-    <div class="element transition-metal" data-period="4" style="grid-column:7" data-category="金属" title="锰">25<br>Mn</div>
-    <div class="element transition-metal" data-period="4" style="grid-column:8" data-category="金属" title="铁">26<br>Fe</div>
-    <div class="element transition-metal" data-period="4" style="grid-column:9" data-category="金属" title="钴">27<br>Co</div>
-    <div class="element transition-metal" data-period="4" style="grid-column:10" data-category="金属" title="镍">28<br>Ni</div>
-    <div class="element transition-metal" data-period="4" style="grid-column:11" data-category="金属" title="铜">29<br>Cu</div>
-    <div class="element transition-metal" data-period="4" style="grid-column:12" data-category="金属" title="锌">30<br>Zn</div>
-    <div class="element post-transition" data-period="4" style="grid-column:13" data-category="金属" title="镓">31<br>Ga</div>
-    <div class="element metalloid" data-period="4" style="grid-column:14" data-category="金属" title="锗">32<br>Ge</div>
-    <div class="element metalloid" data-period="4" style="grid-column:15" data-category="非金属" title="砷">33<br>As</div>
-    <div class="element nonmetal" data-period="4" style="grid-column:16" data-category="非金属" title="硒">34<br>Se</div>
-    <div class="element halogen" data-period="4" style="grid-column:17" data-category="非金属" title="溴">35<br>Br</div>
-    <div class="element noble-gas" data-period="4" style="grid-column:18" data-category="稀有气体" title="氪">36<br>Kr</div>
-</div>
-</div>
-<div id="info-box">
-            <div class="info-header">
-                <h3>0号元素（Nu）</h3>
-                <span class="atomic-number">序号：0</span>
-            </div>
-            <div class="info-category" style="color: rgb(120, 120, 120)">
-            分类：稀有气体
-            </div>
-            <br>
-            <div class="info-section">
-                <label>词条描述：</label>
-                <p>无限制，但选择该元素将无法获得“稀有气体”部分的元素分</p>
-            </div>
-            <div class="metrics-container">
-                <div class="metric">
-                    <label>基础分</label>
-                    <div class="value">0</div>
-                </div>
-                <div class="metric">
-                    <label>悬赏分</label>
-                    <div class="value">0</div>
-                </div>
-            </div>
-            <div class="remark">
-                <label>（TIPS：点击其余元素查看更多信息）</label>
-            </div>
-</div>
-
-<style>
-
 #info-box {
-    width: 90%
+    width: 90%;
     min-height: 60px;
     margin: 20px auto;
     padding: 15px;
@@ -203,7 +109,6 @@ body {
     opacity: 0.2;
 }
 
-/* highlight */
 .element.active {
     transform: scale(1.08);
     z-index: 10;
@@ -295,25 +200,107 @@ body {
 .category-metal { color: rgb(223, 42, 46); }
 .category-nonmetal { color: rgb(0, 74, 255); }
 .category-noble-gas { color: rgb(120, 120, 120); }
+
+/* 新增按钮样式 */
+#reset-to-zero {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: rgb(200,200,200); /* 与稀有气体背景颜色一致 */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08); /* 与稀有气体阴影一致 */
+}
 </style>
+</head>
+<body>
+
+<div class="table-container">
+<div class="periodic-table">
+    <!-- 第1周期 -->
+    <div class="element nonmetal" data-period="1" style="grid-column:1" data-category="非金属(可作金属用)" title="氢">1<br>H</div>
+    <div class="element noble-gas" data-period="1" style="grid-column:18" data-category="稀有气体" title="氦">2<br>He</div>
+
+    <!-- 第2周期 -->
+    <div class="element alkali-metal" data-period="2" style="grid-column:1" data-category="金属" title="锂">3<br>Li</div>
+    <div class="element alkaline-earth" data-period="2" style="grid-column:2" data-category="金属" title="铍">4<br>Be</div>
+    <div style="grid-column:3/13; grid-row:2"></div>
+    <div class="element metalloid" data-period="2" style="grid-column:13" data-category="非金属" title="硼">5<br>B</div>
+    <div class="element nonmetal" data-period="2" style="grid-column:14" data-category="非金属" title="碳">6<br>C</div>
+    <div class="element nonmetal" data-period="2" style="grid-column:15" data-category="非金属" title="氮">7<br>N</div>
+    <div class="element nonmetal" data-period="2" style="grid-column:16" data-category="非金属" title="氧">8<br>O</div>
+    <div class="element halogen" data-period="2" style="grid-column:17" data-category="非金属" title="氟">9<br>F</div>
+    <div class="element noble-gas" data-period="2" style="grid-column:18" data-category="稀有气体" title="氖">10<br>Ne</div>
+
+    <!-- 第3周期 -->
+    <div class="element alkali-metal" data-period="3" style="grid-column:1" data-category="金属" title="钠">11<br>Na</div>
+    <div class="element alkaline-earth" data-period="3" style="grid-column:2" data-category="金属" title="镁">12<br>Mg</div>
+    <div style="grid-column:3/13; grid-row:3"></div>
+    <div class="element post-transition" data-period="3" style="grid-column:13" data-category="金属" title="铝">13<br>Al</div>
+    <div class="element metalloid" data-period="3" style="grid-column:14" data-category="非金属" title="硅">14<br>Si</div>
+    <div class="element nonmetal" data-period="3" style="grid-column:15" data-category="非金属" title="磷">15<br>P</div>
+    <div class="element nonmetal" data-period="3" style="grid-column:16" data-category="非金属" title="硫">16<br>S</div>
+    <div class="element halogen" data-period="3" style="grid-column:17" data-category="非金属" title="氯">17<br>Cl</div>
+    <div class="element noble-gas" data-period="3" style="grid-column:18" data-category="稀有气体" title="氩">18<br>Ar</div>
+
+    <!-- 第4周期 -->
+    <div class="element alkali-metal" data-period="4" style="grid-column:1" data-category="金属" title="钾">19<br>K</div>
+    <div class="element alkaline-earth" data-period="4" style="grid-column:2" data-category="金属" title="钙">20<br>Ca</div>
+    <div class="element transition-metal" data-period="4" style="grid-column:3" data-category="金属" title="钪">21<br>Sc</div>
+    <div class="element transition-metal" data-period="4" style="grid-column:4" data-category="金属" title="钛">22<br>Ti</div>
+    <div class="element transition-metal" data-period="4" style="grid-column:5" data-category="金属" title="钒">23<br>V</div>
+    <div class="element transition-metal" data-period="4" style="grid-column:6" data-category="金属" title="铬">24<br>Cr</div>
+    <div class="element transition-metal" data-period="4" style="grid-column:7" data-category="金属" title="锰">25<br>Mn</div>
+    <div class="element transition-metal" data-period="4" style="grid-column:8" data-category="金属" title="铁">26<br>Fe</div>
+    <div class="element transition-metal" data-period="4" style="grid-column:9" data-category="金属" title="钴">27<br>Co</div>
+    <div class="element transition-metal" data-period="4" style="grid-column:10" data-category="金属" title="镍">28<br>Ni</div>
+    <div class="element transition-metal" data-period="4" style="grid-column:11" data-category="金属" title="铜">29<br>Cu</div>
+    <div class="element transition-metal" data-period="4" style="grid-column:12" data-category="金属" title="锌">30<br>Zn</div>
+    <div class="element post-transition" data-period="4" style="grid-column:13" data-category="金属" title="镓">31<br>Ga</div>
+    <div class="element metalloid" data-period="4" style="grid-column:14" data-category="金属" title="锗">32<br>Ge</div>
+    <div class="element metalloid" data-period="4" style="grid-column:15" data-category="非金属" title="砷">33<br>As</div>
+    <div class="element nonmetal" data-period="4" style="grid-column:16" data-category="非金属" title="硒">34<br>Se</div>
+    <div class="element halogen" data-period="4" style="grid-column:17" data-category="非金属" title="溴">35<br>Br</div>
+    <div class="element noble-gas" data-period="4" style="grid-column:18" data-category="稀有气体" title="氪">36<br>Kr</div>
+</div>
+</div>
+<button id="reset-to-zero">0号元素</button>
+<div id="info-box">
+    <div class="info-header">
+        <h3>0号元素（Nu）</h3>
+        <span class="atomic-number">序号：0</span>
+    </div>
+    <div class="info-category" style="color: rgb(120, 120, 120)">
+        分类：稀有气体
+    </div>
+    <br>
+    <div class="info-section">
+        <label>词条描述：</label>
+        <p>无限制，但选择该元素将无法获得“稀有气体”部分的元素分</p>
+    </div>
+    <div class="metrics-container">
+        <div class="metric">
+            <label>基础分</label>
+            <div class="value">0</div>
+        </div>
+        <div class="metric">
+            <label>悬赏分</label>
+            <div class="value">0</div>
+        </div>
+    </div>
+    <div class="remark">
+        <label>（TIPS：点击其余元素查看更多信息）</label>
+    </div>
+</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const infoBox = document.getElementById('info-box');
     const elements = document.querySelectorAll('.element');
-    
     const initialInfoHTML = infoBox.innerHTML;
 
-    document.addEventListener('click', (event) => {
-    if (!event.target.closest('.element') && !event.target.closest('.table-container')) {
-        elements.forEach(el => el.classList.remove('active'));
-        infoBox.innerHTML = initialInfoHTML;
-    }
-});
-
-
     const elementsData = {
-
         'H': {
             entryDescription: '文章主题与“起源”有关',
             bountyCondition: '文章类型为层级，且须带有“<a href="https://backrooms-wiki-cn.wikidot.com/system:page-tags/tag/c1%E6%8A%A5%E5%91%8A#pages" target="_blank">c1报告</a>”标签',
@@ -566,37 +553,29 @@ document.addEventListener('DOMContentLoaded', () => {
             weightScore: 3,
             remark: '“氪”的名字Krypton源于希腊语“κρυπτός”（kryptós），意为“隐藏的”或“秘密的”。（与超人的氪石无关！与氪金 [課金] 无关！）'
         },
-
     };
 
-
     function handleElementClick(event) {
-
         elements.forEach(el => el.classList.remove('active'));
-        
-
         const element = event.currentTarget;
         element.classList.add('active');
-        
-
         const category = element.dataset.category;
         const name = element.title;
         const symbol = element.querySelector('br').nextSibling.textContent;
         const number = element.firstChild.textContent;
         const categoryColorMap = {
-          '金属': 'category-metal',
-          '非金属': 'category-nonmetal',
-          '稀有气体': 'category-noble-gas'
+            '金属': 'category-metal',
+            '非金属': 'category-nonmetal',
+            '稀有气体': 'category-noble-gas'
         };
         const data = elementsData[symbol] || {};
-        
         infoBox.innerHTML = `
             <div class="info-header">
                 <h3>${element.title}（${symbol}）</h3>
                 <span class="atomic-number">序号：${element.firstChild.textContent}</span>
             </div>
             <div class="info-category ${categoryColorMap[category] || ''}">
-            分类：${category}
+                分类：${category}
             </div>
             <br>
             <div class="info-section">
@@ -606,10 +585,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ${data.bountyCondition ? `
             <br>
             <div class="bounty-condition">
-            <label>悬赏条件：</label>
-            <p>${data.bountyCondition}</p>
+                <label>悬赏条件：</label>
+                <p>${data.bountyCondition}</p>
             </div>
-          ` : ''}
+            ` : ''}
             <div class="metrics-container">
                 <div class="metric">
                     <label>基础分</label>
@@ -626,15 +605,18 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 
-
-
     elements.forEach(element => {
         element.addEventListener('click', handleElementClick);
     });
+
+    // 新增：点击“0号元素”按钮重置
+    const resetButton = document.getElementById('reset-to-zero');
+    resetButton.addEventListener('click', () => {
+        elements.forEach(el => el.classList.remove('active'));
+        infoBox.innerHTML = initialInfoHTML;
+    });
 });
-
 </script>
-
 
 </body>
 </html>
